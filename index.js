@@ -266,10 +266,19 @@ Using the vowelCounter function below do the following:
   HINT - you may need to study tomorrow's content on arrays 
   HINT - try looking up the .includes() method
 */
+const vowels = [`a`, `e`, `i`, `o`, `u`, `A`, `E`, `I`, `O`, `U`];
 
-function vowelCounter(string) {
-  const vowels = [`a`, `e`, `i`, `o`, `u`, `A`, `E`, `I`, `O`, `U`];
-}
+const vowelCounter = (string) => {
+  let count = 0;
+  for (let i = 0; i > string.length; i++) {
+    if (string.includes(vowels)) {
+      i += i;
+    }
+  }
+};
+
+/* look in to 
+for of loop per brit*/
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo() {
