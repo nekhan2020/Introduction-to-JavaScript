@@ -146,40 +146,41 @@ Use the game function below to do the following:
   RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
-*/
+  */
 
-const computer = Math.ceil(Math.random() * 3);
+let computer = Math.ceil(Math.random() * 3);
+if (computer === 1) {
+  computer = "scissors";
+} else if (computer === 2) {
+  computer = "rock";
+} else {
+  computer = "paper";
+}
+console.log(computer);
 function game(user, computer) {
-  if (computer === 1) {
-    computer = `scissors`;
-  } else if (computer === 2) {
-    computer = `rock`;
-  } else {
-    computer = `paper`;
-  }
   if (user === computer) {
-    return `it's a tie`;
-  } else if (computer === `scissors`) {
-    if (user === `rock`) {
-      return `you win!`;
+    return "it's a tie";
+  } else if (computer === "scissors") {
+    if (user === "rock") {
+      return "you win!";
     } else {
-      return `you lose!`;
+      return "you lose!";
     }
-  } else if (computer === `rock`) {
-    if (user === `paper`) {
-      return `you win!`;
+  } else if (computer === "rock") {
+    if (user === "paper") {
+      return "you win!";
     } else {
-      return `you lose!`;
+      return "you lose!";
     }
-  } else if (computer === `paper`) {
-    if (user === `scissors`) {
-      return `you win!`;
+  } else if (computer === "paper") {
+    if (user === "scissors") {
+      return "you win!";
     } else {
-      return `you lose!`;
+      return "you lose!";
     }
   }
 }
-
+console.log(game(`rock`, computer));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter
@@ -192,7 +193,7 @@ Using the miles function below do the following:
 */
 
 function miles(km) {
-  return km / 1.60934;
+  return km * 0.621371;
 }
 
 //Task 5b - Feet to CM
@@ -267,7 +268,7 @@ Using the vowelCounter function below do the following:
 */
 
 function vowelCounter(string) {
-  const vowels = [`a,`e`,`i`,`o`,`u`,`A`,`E`,`I`,`O`,`U`]
+  const vowels = [`a`, `e`, `i`, `o`, `u`, `A`, `E`, `I`, `O`, `U`];
 }
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
